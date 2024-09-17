@@ -65,25 +65,26 @@ public class RPSGame extends JFrame {
         setLayout( null);
         setResizable(false);
         setSize(450,400);
-        getContentPane().setBackground(new Color(200,240,200));
+        getContentPane().setBackground(new Color(98, 188, 248));
         setLocationRelativeTo(null);
         setVisible(true);
     }
 
-    //    outputField.setText("                            You Won !!!");
-//    outputField.setText("                     Oops !! You Loose");
     private void output1() {
         String type = choice[generateRandom()];
         try{
             if (type.equals("Rock")){
+                getContentPane().setBackground(new Color(242, 242, 242));
                 outputField.setText("                  Its a Draw !!");
                 compOut.setText("    Computer Input >> "+type);
             }
             else if (type.equals("Scissor")){
+                getContentPane().setBackground(new Color(22, 142, 48));
                 outputField.setText("             YAY !!  You Won ");
                 compOut.setText("    Computer Input >> "+type);
             }
             else {
+                getContentPane().setBackground(new Color(197, 31, 31));
                 outputField.setText("            Oops !! You Loose");
                 compOut.setText("    Computer Input >> "+type);
             }
@@ -95,14 +96,17 @@ public class RPSGame extends JFrame {
         String type = choice[generateRandom()];
         try {
             if (type.equals("Paper")){
+                getContentPane().setBackground(new Color(242, 242, 242));
                 outputField.setText("                  Its a Draw !!");
                 compOut.setText("    Computer Input >> "+type);
             }
             else if (type.equals("Rock")){
+                getContentPane().setBackground(new Color(22, 142, 48));
                 outputField.setText("             YAY !!  You Won ");
                 compOut.setText("    Computer Input >> "+type);
             }
             else {
+                getContentPane().setBackground(new Color(197, 31, 31));
                 outputField.setText("            Oops !! You Loose");
                 compOut.setText("    Computer Input >> "+type);
             }
@@ -110,19 +114,21 @@ public class RPSGame extends JFrame {
             e.printStackTrace();
         }
     }
-
     private void output3() {
         String type = choice[generateRandom()];
         try {
             if (type.equals("Scissor")){
+                getContentPane().setBackground(new Color(242, 242, 242));
                 outputField.setText("                  Its a Draw !!");
                 compOut.setText("    Computer Input >> "+type);
             }
             else if (type.equals("Paper")){
+                getContentPane().setBackground(new Color(22, 142, 48));
                 outputField.setText("             YAY !!  You Won ");
                 compOut.setText("    Computer Input >> "+type);
             }
             else {
+                getContentPane().setBackground(new Color(197, 31, 31));
                 outputField.setText("            Oops !! You Loose");
                 compOut.setText("    Computer Input >> "+type);
             }
@@ -131,6 +137,7 @@ public class RPSGame extends JFrame {
         }
     }
 
+    
     private static int generateRandom() {
         return (int) ((Math.random() * (3)) + 0);
     }
